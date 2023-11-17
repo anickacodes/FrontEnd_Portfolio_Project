@@ -16,9 +16,10 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #64fcff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: teal;
 }

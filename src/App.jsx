@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import About from './pages/About';
 import Schedule from './pages/Schedule';
 import New from './pages/New'
+import Error from './pages/Error';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/styles/new'  element={<New />}/>
         <Route path='/about'  element={<About/>}/>
         <Route path='/book'  element={<Schedule/>}/>
+        <Route path='*'  element={<Error/>}/>
       </Routes>
     </Router>
 

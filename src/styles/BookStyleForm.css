@@ -1,9 +1,10 @@
 
 
- form input [type="text"]{
+input {
   padding: '8px';
   margin: '8px';
   border-Radius: '4px';
   border: '1px solid #ccc';
   width: '200px'
+  
 }

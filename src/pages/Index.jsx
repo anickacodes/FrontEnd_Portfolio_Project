@@ -1,21 +1,19 @@
-import Styles from "../components/Styles"
-
+import StylesList from "../components/StylesList";
 
 const Index = () => {
+  return (
+    <div
+      className="styles-container"
+      style={{ backgroundImage: "src/assets/cnl.jpeg" }}
+    >
+      <h2>
+        <em> Styles </em>{" "}
+      </h2>
+      <section>
+        <StylesList />
+      </section>
+    </div>
+  );
+};
 
-
-
-
-
-
-    return (
-        <div className="styles-container">
-            <h2><em> Styles </em>  </h2>
-            <section>
-                <Styles />
-            </section>
-        </div>
-    )
-}
-
-export default Index
+export default Index;
