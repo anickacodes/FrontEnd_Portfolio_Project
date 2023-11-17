@@ -104,3 +104,7 @@ const Calendar = () => {
 };
 
 export default Calendar;
+
+
+// make it so that date booked prior to returns error - 'Day is available'
+// make the form so when booked, date is prefilled - include inputs for :stylename, photo if applicable, paymet-typpe 

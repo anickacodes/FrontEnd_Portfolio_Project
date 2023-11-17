@@ -6,6 +6,7 @@ import Index from './pages/Index';
 import NavBar from './components/NavBar';
 import About from './pages/About';
 import Schedule from './pages/Schedule';
+import New from './pages/New'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/'  element={<Home/>}/>
         <Route path='/styles'  element={<Index/>}/>
+        <Route path='/styles/new'  element={<New />}/>
         <Route path='/about'  element={<About/>}/>
         <Route path='/book'  element={<Schedule/>}/>
       </Routes>
