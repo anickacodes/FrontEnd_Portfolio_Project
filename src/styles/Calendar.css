@@ -3,39 +3,39 @@
     max-width: 800px;
     margin: 0 auto;
     font-family: 'Arial', sans-serif;
-  }
-  
-  .header {
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
     border-bottom: 1px solid #ddd;
     background-color: rgb(82, 12, 114);
-  }
-  
-  .icon {
+}
+
+.icon {
     cursor: pointer;
-  }
-  
-  .days {
+}
+
+.days {
     margin: 0;
     padding: 0;
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-  }
-  
-  .col {
+}
+
+.col {
     flex: 1;
     padding: 1em;
     text-align: center;
-  }
-  
-  .cell {
+}
+
+.cell {
     position: relative;
     width: 100%;
     height: 80px;
@@ -43,14 +43,14 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
-  
-  .number {
+}
+
+.number {
     font-size: 1.5em;
     font-weight: 600;
-  }
-  
-  .bg {
+}
+
+.bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -59,21 +59,51 @@
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  
-  .cell:hover .bg {
+}
+
+.cell:hover .bg {
     background-color: #ddd;
     opacity: 0.3;
-  }
-  
-  .disabled {
+}
+
+.disabled {
     color: #ddd;
-  }
-  
-  .selected {
+}
+
+.selected {
     background-color: #007bff;
     color: #fff;
-  }
-  
+}
 
-  
+
+@media screen and (max-width: 600px) {
+    .calendar {
+        max-width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon {
+        margin-top: 1em;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        flex: none;
+        width: 100%;
+    }
+
+    .cell {
+        height: 60px;
+    }
+
+    .number {
+        font-size: 1em;
+    }
+}
