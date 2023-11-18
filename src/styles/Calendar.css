@@ -90,9 +90,7 @@
         margin-top: 1em;
     }
 
-    .row {
-        flex-direction: column;
-    }
+ 
 
     .col {
         flex: none;
