@@ -22,8 +22,6 @@ const AddStyleForm = () => {
     <>
       <br />
       <br />
-      <br />
-      <br />
       <h2>
         {" "}
         Page In Progress: <br /> Please Excuse Our Appearance
@@ -72,25 +70,30 @@ const AddStyleForm = () => {
             placeholder="Questions, Comments and/or Concerns"
           ></textarea>
         </label>
-<div className="t-and-c">
-        <label
-          htmlFor="check"
-          className="bookStyleForm_radio"
-          onChange={(e) => {
-            setRadioButton(e.target.value);
-          }}
-        >
-          <br/>
-          <span> All information on this form is filled out correctly, to the best of my knowledge. By choosing 'Agree', I have read, understand and agree to the Terms & Conditions.</span>
-          <br/>
-       
-          <input type="radio" name="check" value="agree" />
-          <span>Thank you, I Agree</span>
-          <br/>
-          
-          <input type="radio" name="size" value="disagree" />
-          <span>Thank you, I Disagree</span>
-        </label>
+        <div className="t-and-c">
+          <label
+            htmlFor="check"
+            className="bookStyleForm_radio"
+            onChange={(e) => {
+              setRadioButton(e.target.value);
+            }}
+          >
+            <br />
+            <span>
+              {" "}
+              All information on this form is filled out correctly, to the best
+              of my knowledge. By choosing 'Agree', I have read, understand and
+              agree to the Terms & Conditions.
+            </span>
+            <br />
+
+            <input type="radio" name="check" value="agree" />
+            <span>Thank you, I Agree</span>
+            <br />
+
+            <input type="radio" name="size" value="disagree" />
+            <span>Thank you, I Disagree</span>
+          </label>
         </div>
       </form>
     </>
