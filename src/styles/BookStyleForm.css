@@ -9,12 +9,18 @@
 .t-and-c {
   border: 2px rgb(184, 167, 167) outset;
   align-items: start;
+  
 }
 
 input[type="radio"] {
   margin: 0;
   width: 44px;
+  
+}
 
+input[type="submit"] {
+  justify-self: center;
+  border: 1px dashed darkslategray
 }
 
 input,

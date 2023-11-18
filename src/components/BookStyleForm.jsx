@@ -17,11 +17,12 @@ const AddStyleForm = () => {
     const id = event.target.id;
     setForm({ ...form, [id]: value });
   }
-
+function handleSubmit (e) {
+e.preventDefault()
+}
   return (
     <>
-      <br />
-      <br />
+     <div>
       <h2>
         {" "}
         Page In Progress: <br /> Please Excuse Our Appearance
@@ -93,9 +94,12 @@ const AddStyleForm = () => {
 
             <input type="radio" name="size" value="disagree" />
             <span>Thank you, I Disagree</span>
-          </label>
+          </label> <br/>
         </div>
+        <input type='submit' />
+
       </form>
+      </div>
     </>
   );
 };
