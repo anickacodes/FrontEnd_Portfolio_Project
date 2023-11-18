@@ -23,14 +23,14 @@ const Calendar = () => {
       <div className="header row flex-middle">
         <div className="col col-start">
           <div className="icon" onClick={prevMonth}>
-            L
+            Prev Month
           </div>
         </div>
         <div className="col col-center">
           <span>{format(currentMonth, dateFormat)}</span>
         </div>
         <div className="col col-end" onClick={nextMonth}>
-          <div className="icon">R</div>
+          <div className="icon">Next Month</div>
         </div>
       </div>
     );
