@@ -1,10 +1,27 @@
+.book-form {
+  display: grid;
+  /* grid-template-columns: auto 1fr; */
+  gap: 7px;
+  padding-top: 20px;
+  color: rgb(39, 14, 61);
+}
 
+.t-and-c {
+  border: 2px rgb(184, 167, 167) outset;
+  align-items: start;
+}
 
-input {
-  padding: '8px';
-  margin: '8px';
-  border-Radius: '4px';
-  border: '1px solid #ccc';
-  width: '200px'
-  
+input[type="radio"] {
+  margin: 0;
+  width: 44px;
+
+}
+
+input,
+textarea {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 2em;
+  border: 2px solid #decbcb;
+  width: 220px;
 }

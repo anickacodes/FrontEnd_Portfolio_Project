@@ -10,11 +10,11 @@ const Home = () => {
   const confettiConfig = {
     angle: 620,
     spread: 50,
-    startVelocity: 4,
+    startVelocity: 14,
     elementCount: 220,
     dragFriction: 0.422,
     duration: 7133,
-    stagger: 7,
+    stagger: 11,
     width: "48%",
     height: "24%",
     colors: ["#4d188e", "#1a7968", "#ffe065", "#a4394f", "#a3f77f"],

@@ -1,18 +1,29 @@
-
-import { format, addMonths, subMonths, startOfWeek, startOfMonth, endOfMonth, endOfWeek, isSameMonth, isSameDay, addDays } from 'date-fns';
-import { useState } from 'react';
-import '../styles/Calendar.css'
+import {
+  format,
+  addMonths,
+  subMonths,
+  startOfWeek,
+  startOfMonth,
+  endOfMonth,
+  endOfWeek,
+  isSameMonth,
+  isSameDay,
+  addDays,
+} from "date-fns";
+import { useState } from "react";
+import "../styles/Calendar.css";
 
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
   const header = () => {
     const dateFormat = "MMMM yyyy";
+
     return (
       <div className="header row flex-middle">
         <div className="col col-start">
           <div className="icon" onClick={prevMonth}>
-           L
+            L
           </div>
         </div>
         <div className="col col-center">
@@ -105,6 +116,5 @@ const Calendar = () => {
 
 export default Calendar;
 
-
 // make it so that date booked prior to returns error - 'Day is available'
-// make the form so when booked, date is prefilled - include inputs for :stylename, photo if applicable, paymet-typpe 
+// make the form so when booked, date is prefilled - include inputs for :stylename, photo if applicable, paymet-typpe
