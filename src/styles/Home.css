@@ -3,7 +3,7 @@
     margin: 11px;
     background-image: url('../assets/cnl.jpeg');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 
 .home {
