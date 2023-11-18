@@ -20,13 +20,15 @@ const StylesList = () => {
   }, []);
 
   return (
-    <div className="stylesList-container" style={{}}>
-      <section>
-        {styles.map(({ category, service, image_url }) => (
-          <Link to={`/styles/${id}`} className="stylesIndex_card">
-            <img src={image_url} alt={service} />
-            <span>{category}</span>
+    <div>
+      <section className="stylesList-container">
+        {styles.map(({id, category, service, image_url }) => (
+          <div className="stylesIndex_card" key={id}>
+          <Link to={`/styles/${id}`}>
+            <img src={image_url} alt={category} />
+            <span>{service}</span>
           </Link>
+          </div>
         ))}
       </section>
     </div>

@@ -1,0 +1,9 @@
+.nav-container {
+    margin-bottom: 22px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-Content: space-around;
+}

@@ -1,0 +1,22 @@
+.wrapper {
+    padding: 22px;
+    margin: 11px;
+    background-image: url('../assets/cnl.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.home {
+
+    height: 500px;
+    margin: 20px;
+}
+
+.greeting {
+    color: teal;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    border: 2px coral outset;
+    padding: 22px;
+}
