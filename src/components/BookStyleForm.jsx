@@ -84,7 +84,7 @@ e.preventDefault()
               {" "}
               All information on this form is filled out correctly, to the best
               of my knowledge. By choosing 'Agree', I have read, understand and
-              agree to the Terms & Conditions.
+              agree to the <a href='/terms' >Terms & Conditions</a>.
             </span>
             <br />
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import '../styles/StylesList.css'
-
+import "../styles/StylesList.css";
 
 const StylesList = () => {
   const navigate = useNavigate();
@@ -22,12 +21,12 @@ const StylesList = () => {
   return (
     <div>
       <section className="stylesList-container" key={id}>
-        {styles.map(({id, category, service, image_url }) => (
+        {styles.map(({ category, service, image_url }) => (
           <div className="stylesIndex_card" key={id}>
-          <Link to={`/styles/${id}`}>
-            <img src={image_url} alt={category} />
-            <span>{service}</span>
-          </Link>
+            <Link to={`/styles/${id}`}>
+              <img src={image_url} alt={category} />
+              <span>{service}</span>
+            </Link>
           </div>
         ))}
       </section>
