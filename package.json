@@ -10,6 +10,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "author": "Anicka Lewis",
+  "license": "MIT",
   "dependencies": {
     "date-fns": "^2.30.0",
     "react": "^18.2.0",

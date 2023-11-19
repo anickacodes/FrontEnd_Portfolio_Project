@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "category": "Knotless",
+    "service": "Medium-Knotless-Braids",
+    "duration": "02:00:00",
+    "description": " ",
+    "price": "205",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8v8hBd0f5H53LQ-BGcircjRALai9ETD4bg&usqp=CAU"
+  },
+  {
+    "id": 2,
+    "category": "Knotless",
+    "service": "Large-Knotless-Braids",
+    "duration": "01:30:00",
+    "description": " ",
+    "price": "185",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Y1HX7iJld9wWgF3w02HSljH7yAIBG8gGzA&usqp=CAU"
+  },
+  {
+    "id": 3,
+    "category": "Crochet",
+    "service": "Twists Crochet",
+    "duration": "01:45:00",
+    "description": " ",
+    "price": "100",
+    "image_url": "https://i0.wp.com/www.atsavvy.com/wp-content/uploads/2022/01/53121B52-3A31-4267-87DE-2DDE37B9DCF2-scaled.jpeg?resize=1020%2C1275&ssl=1"
+  },
+  {
+    "id": 4,
+    "category": "Crochet",
+    "service": "Invisible Crochet Locs",
+    "duration": "01:55:00",
+    "description": " ",
+    "price": "100",
+    "image_url": "https://content.latest-hairstyles.com/wp-content/uploads/half-braided-crochet-hair.jpg"
+  },
+  {
+    "id": 5,
+    "category": "Traditional",
+    "service": "Medium Box Braids",
+    "duration": "04:55:00",
+    "description": " ",
+    "price": "185",
+    "image_url": "https://i.redd.it/rkpbxcfsot261.png"
+  },
+  {
+    "id": 6,
+    "category": "Traditional",
+    "service": "Large Box Braids",
+    "duration": "04:00:00",
+    "description": " ",
+    "price": "170",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCytJEwyyFxL19IR5U9zy_QsLXpKJRkIi5pg&usqp=CAU"
+  },
+  {
+    "id": 7,
+    "category": "Natural",
+    "service": "Straight Backs",
+    "duration": "00:20:00",
+    "description": " ",
+    "price": "45",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Ny22M8jvP2c2cjVCNwacvz680CNuNWOwECWn_beAngc9x2qMiukoRpUVtK64C_iH9pY&usqp=CAU"
+  },
+  {
+    "id": 8,
+    "category": "Natural",
+    "service": "Stitch Straight Backs",
+    "duration": "00:30:00",
+    "description": " ",
+    "price": "55",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj0BK4d8LJRIWdYbYYe1LtMXRGDgBHTzmOecrA1lvsdefZDfyWlprfV5ViHlgMPCxDqvQ&usqp=CAU"
+  },
+  {
+    "id": 9,
+    "category": "Natural",
+    "service": "Starter Locs",
+    "duration": "01:35:00",
+    "description": " ",
+    "price": "80",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj0BK4d8LJRIWdYbYYe1LtMXRGDgBHTzmOecrA1lvsdefZDfyWlprfV5ViHlgMPCxDqvQ&usqp=CAU"
+  },
+  {
+    "id": 10,
+    "category": "Natural",
+    "service": "Loc Retwist",
+    "duration": "01:05:00",
+    "description": " ",
+    "price": "100",
+    "image_url": "https://i0.wp.com/www.atsavvy.com/wp-content/uploads/2022/01/53121B52-3A31-4267-87DE-2DDE37B9DCF2-scaled.jpeg?resize=1020%2C1275&ssl=1"
+  }
+]

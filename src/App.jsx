@@ -10,8 +10,12 @@ import New from "./pages/New";
 import Error from "./pages/Error";
 import Show from "./pages/Show";
 import Footer from "./components/Footer";
+import Disclosure from "./pages/Disclosure";
 
 function App() {
+
+const [selectedStyleById] = useState([])
+
   return (
     <>
       <Router>
@@ -24,6 +28,7 @@ function App() {
           <Route path="/styles/new" element={<New />} />
           <Route path="/about" element={<About />} />
           <Route path="/book" element={<Schedule />} />
+          <Route path="/book/terms" element={<Disclosure />} />
           {/* <Route path="/error" element={<Error />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
