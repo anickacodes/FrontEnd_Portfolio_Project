@@ -1,0 +1,21 @@
+.terms_container {
+    max-width: fit-content;
+    margin: auto;
+    padding: 11px;
+    border: 5px groove rgb(41, 41, 41) ;
+
+}
+
+.terms_header,
+.self-made {
+    color: rgb(125, 43, 163);
+}
+
+.terms_article {
+    font-family: 'Arial', sans-serif;
+}
+
+.important-point {
+    font-weight: bold;
+    color: #051d37;
+}
