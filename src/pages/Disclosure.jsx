@@ -9,8 +9,8 @@ const Disclosure = () => {
           [CLN Stylez] - Terms and Conditions Agreement Effective Date:
           [November 19,2023]
         </span>
-        <br /> <span className="important-point">1. Booking and Deposit:</span>{" "}
-        A non-refundable deposit of 25% is required for all appointments. The
+        <span className="important-point">1. Booking and Deposit:</span> A
+        non-refundable deposit of 25% is required for all appointments. The
         deposit will be deducted from the total cost of the service. <br />
         <span className="important-point">2: Appointment Booking:</span> Clients
         are required to book appointments at least 24 hours in advance. Same-day

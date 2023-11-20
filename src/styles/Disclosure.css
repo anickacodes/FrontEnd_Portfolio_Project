@@ -2,9 +2,8 @@
     max-width: fit-content;
     margin: auto;
     padding: 11px;
-    border: 5px groove rgb(41, 41, 41) ;
+    border: 5px groove rgb(41, 41, 41);
     font-size: larger;
-
 }
 
 .terms_header,
@@ -12,11 +11,17 @@
     color: rgb(125, 43, 163);
 }
 
-.terms_article {
+.terms_section {
     font-family: 'Arial', sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 22px;
 }
 
 .important-point {
     font-weight: bold;
-    color: #1666bc;
+    color: #2b3d52;
 }

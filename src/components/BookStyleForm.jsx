@@ -6,9 +6,9 @@ const AddStyleForm = () => {
   const [form, setForm] = useState({
     name: "",
     image_url: "",
-    service: '',
+    service: "",
     date: "",
-    duration: '00:00:00',
+    duration: "00:00:00",
     description: "",
     agreement: "",
   });
@@ -67,15 +67,18 @@ const AddStyleForm = () => {
             placeholder="add image"
           />
 
-<label htmlFor="service"> Service: </label><input
+          <label htmlFor="service"> Service: </label>
+          <input
             type="text"
             id="service"
             onChange={(se) => handleInputs(se)}
             value={form.service}
             placeholder="service: "
           />
-<label htmlFor="duration"> duration: </label><input
-            type='time'
+
+          <label htmlFor="duration"> duration: </label>
+          <input
+            type="time"
             id="duration"
             onChange={(se) => handleInputs(se)}
             value={form.duration}
@@ -84,6 +87,7 @@ const AddStyleForm = () => {
 
           <label htmlFor="date"> Date: </label>
           <input
+          id="date"
             type="date"
             onChange={(se) => handleInputs(se)}
             value={form.date}
