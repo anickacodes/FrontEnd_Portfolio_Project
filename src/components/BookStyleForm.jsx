@@ -6,10 +6,13 @@ const AddStyleForm = () => {
   const [form, setForm] = useState({
     name: "",
     image_url: "",
+    service: '',
     date: "",
+    duration: '00:00:00',
     description: "",
+    agreement: "",
   });
-
+  const API = import.meta.env.VITE_API_PORT;
   const [description, setDescription] = useState("");
   const [radioButton, setRadioButton] = useState("");
 
@@ -18,57 +21,85 @@ const AddStyleForm = () => {
     const id = event.target.id;
     setForm({ ...form, [id]: value });
   }
-  function handleSubmit(e) {
+
+  async function handleSubmit(e) {
     e.preventDefault();
+    try {
+      const res = await fetch(`${API}/styles`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        console.log("Request Succesfully sent!");
+        alert(
+          "Thank You; Request Succesfully sent! You will be contacted within 24hours."
+        );
+      } else {
+        console.error(`Error sending form data`);
+      }
+    } catch (err) {
+      console.error("ERROR", err);
+    }
   }
   return (
     <>
       <div>
         <h3> Appointment Request Form </h3>
-        <form className="book-form">
+        <form className="book-form" onSubmit={handleSubmit}>
           <label htmlFor="name"> Name: </label>
-            <input
-              type="text"
-              id="name"
-              onChange={(se) => handleInputs(se)}
-              value={form.name}
-              placeholder="Name: "
-            />
-         
+          <input
+            type="text"
+            id="name"
+            onChange={(se) => handleInputs(se)}
+            value={form.name}
+            placeholder="Name: "
+          />
+
           <label htmlFor="image"> Image: </label>
-            <input
-              type="url"
-              id="image_url"
-              onChange={(se) => handleInputs(se)}
-              value={form.image_url}
-              placeholder="add image"
-            />
-          
+          <input
+            type="url"
+            id="image_url"
+            onChange={(se) => handleInputs(se)}
+            value={form.image_url}
+            placeholder="add image"
+          />
+
+<label htmlFor="service"> Service: </label><input
+            type="text"
+            id="service"
+            onChange={(se) => handleInputs(se)}
+            value={form.service}
+            placeholder="service: "
+          />
+<label htmlFor="duration"> duration: </label><input
+            type='time'
+            id="duration"
+            onChange={(se) => handleInputs(se)}
+            value={form.duration}
+            placeholder="duration: "
+          />
+
           <label htmlFor="date"> Date: </label>
-            <input
-              type="date"
-              onChange={(se) => handleInputs(se)}
-              value={form.date}
-              placeholder=""
-            />
-          
-          <label>
-            <input type="text" />
-          </label>
-          <label>
-            <input type="text" />
-          </label>
+          <input
+            type="date"
+            onChange={(se) => handleInputs(se)}
+            value={form.date}
+            placeholder=""
+          />
           <label htmlFor="description"> Q/C/C: </label>
-            <textarea
-              rows={"3"}
-              cols={"50"}
-              value={description}
-              onChange={(e) => {
-                setDescription(e.target.value);
-              }}
-              placeholder="Questions, Comments and/or Concerns"
-            ></textarea>
-          
+          <textarea
+            rows={"3"}
+            cols={"50"}
+            value={description}
+            onChange={(e) => {
+              setDescription(e.target.value);
+            }}
+            placeholder="Questions, Comments and/or Concerns"
+          ></textarea>
+
           <div className="t-and-c">
             <label
               htmlFor="check"
@@ -96,7 +127,7 @@ const AddStyleForm = () => {
             </label>{" "}
             <br />
           </div>
-          <input type="submit" />
+          <input type="submit" value="submit" />
         </form>
       </div>
     </>

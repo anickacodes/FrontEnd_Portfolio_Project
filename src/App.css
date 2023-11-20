@@ -3,13 +3,14 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(to bottom left, #edaaaabd, #b5a3a3);
+  /* background: linear-gradient(-80deg, #edaaaabd, #3c2323); */
+  background: repeating-linear-gradient(to bottom , #5e4670bd, #cdb2e1bd 6%, rgba(255, 226, 63, 0.857)10%, #b2aaedbd 21%);
 
 }
 
 
   /* body {
-    display: flex;
+    display: flex4
     justify-content: center;
     align-items: center;
     min-height: 100vh;
