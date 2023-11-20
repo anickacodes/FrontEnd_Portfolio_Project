@@ -40,9 +40,9 @@ const StylesList = () => {
       <section className="stylesList-container" key={selectedStyleById}>
         {styles.map(({ id, category, service, image_url }) => (
           <div className="stylesIndex_card" key={id}>
-            <Link to={`/styles/${id}`}>
-              <img src={image_url} alt={category} />
-              {/* &nbsp; */}
+            <Link className='styles_link' to={`/styles/${id}`}>
+              <img className='styles_images' src={image_url} alt={category} />
+              &nbsp;<br/>
               <span>
                 Category: {category} <br />
                 Style: {service}

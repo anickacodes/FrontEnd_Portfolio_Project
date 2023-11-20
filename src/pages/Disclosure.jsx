@@ -3,7 +3,7 @@ import "../styles/Disclosure.css";
 const Disclosure = () => {
   return (
     <div className="terms_container">
-      <h2 className="terms_header"> Terms & Conditions</h2>
+      <h2 className="terms_header"> Client Appointment Agreement </h2>
       <article className="terms_section">
         <span className="self-made">
           [CLN Stylez] - Terms and Conditions Agreement Effective Date:

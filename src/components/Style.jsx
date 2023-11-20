@@ -1,7 +1,8 @@
 
 
 
-const Style = () => {
+const Style = ({selectedStyleById}) => {
+
 
 
     return (

@@ -12,9 +12,12 @@ import {
 } from "date-fns";
 import { useState } from "react";
 import "../styles/Calendar.css";
+import AddStyleForm from "./BookStyleForm";
 
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [visibleForm, setVisibleForm] = useState(false)
 
   const header = () => {
     const dateFormat = "MMMM yyyy";
@@ -101,8 +104,17 @@ const Calendar = () => {
   };
 
   const onDateClick = (day) => {
-    // Handle date click logic here
-    console.log("Clicked on date:", day);
+    if (day >= new Date()) {
+      setSelectedDate(isSameDay(day, selectedDate) ? null : day);
+      setVisibleForm(true);
+    } else {
+      alert("Sorry, day is not available for booking");
+      console.log("Sorry, day is not available for booking");
+    }
+  };
+
+  const closeForm = () => {
+    setVisibleForm(false);
   };
 
   return (
@@ -110,6 +122,15 @@ const Calendar = () => {
       {header()}
       {daysOfWeek()}
       {cells()}
+      {visibleForm && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeForm}>&times;</span>
+            <AddStyleForm selectedDate={selectedDate} />
+          </div>
+        </div>
+      )}
+      {/* <AddStyleForm selectedDate={selectedDate} /> */}
     </div>
   );
 };

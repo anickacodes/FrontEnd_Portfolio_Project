@@ -3,7 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: linear-gradient(to bottom left, #edaaaabd, #b5a3a3);
+
 }
+
 
   /* body {
     display: flex;

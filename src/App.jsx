@@ -14,7 +14,7 @@ import Disclosure from "./pages/Disclosure";
 
 function App() {
 
-const [selectedStyleById] = useState([])
+const [styleById, selectedStyleById] = useState([])
 
   return (
     <>
@@ -23,12 +23,12 @@ const [selectedStyleById] = useState([])
         {/* <Home/> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/styles" element={<Index />} />
-          <Route path="/styles/:id" element={<Show />} />
+          <Route path="/styles" element={<Index />} styleById={styleById}/>
+          <Route path="/styles/:id" element={<Show />} selectedStyleById={selectedStyleById}/>
           <Route path="/styles/new" element={<New />} />
           <Route path="/about" element={<About />} />
           <Route path="/book" element={<Schedule />} />
-          <Route path="/book/terms" element={<Disclosure />} />
+          <Route path="/terms" element={<Disclosure />} />
           {/* <Route path="/error" element={<Error />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>

@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 24px;
-  border: 1px gold solid;
+  /* border:  gold solid; */
   margin: 20px;
   padding: 11px;
 }
 
-img {
+.styles_images {
   width: 30%;
   height: 60%;
   object-fit: cover;
@@ -22,6 +22,7 @@ img {
   padding: 10px;
   margin: 20px 0 1px 0;
 }
+
 
 /* @media screen and (max-width: 600px) {
 
