@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/StylesList.css";
 import localData from "../data/styles.json";
 
-const StylesList = () => {
+const StylesList = ({ styleById }) => {
   const navigate = useNavigate();
   const { id: selectedStyleById } = useParams();
   const API = import.meta.env.VITE_API_PORT;
@@ -12,9 +12,7 @@ const StylesList = () => {
   useEffect(() => {
     const fetchLocalData = async () => {
       try {
-        const res = await fetch(`${localData}`);
-        const myData = await res.json();
-        setStyles(myData);
+        setStyles(localData);
       } catch (err) {
         console.error("Error fetching local data", err);
         navigate("/error");
@@ -40,14 +38,17 @@ const StylesList = () => {
       <section className="stylesList-container" key={selectedStyleById}>
         {styles.map(({ id, category, service, image_url }) => (
           <div className="stylesIndex_card" key={id}>
-            <Link className='styles_link' to={`/styles/${id}`}>
-              <img className='styles_images' src={image_url} alt={category} />
-              &nbsp;<br/>
+            <Link className="styles_link" to={`/styles/${id}`} state={{ style: { id, category, service, image_url } }}>
+              <img className="styles_images" src={image_url} alt={category} />
+              &nbsp;
+              <br />
               <span>
                 Category: {category} <br />
                 Style: {service}
               </span>
             </Link>
+            <br />
+            <button>❌</button>
           </div>
         ))}
       </section>

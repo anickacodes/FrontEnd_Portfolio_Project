@@ -13,23 +13,15 @@ import Footer from "./components/Footer";
 import Disclosure from "./pages/Disclosure";
 
 function App() {
-  const [styleById, selectedStyleById] = useState([]);
-
   return (
     <>
       <Router>
         <NavBar />
-        {/* <Home/> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/styles" element={<Index />} styleById={styleById} />
-          <Route
-            path="/styles/:id"
-            element={<Show />}
-            selectedStyleById={selectedStyleById}
-          />
+          <Route path="/styles" element={<Index />} />
+          <Route path="/styles/:id" element={<Show />} />
           <Route path="/styles/new" element={<New />} />
-
           <Route path="/about" element={<About />} />
           <Route path="/book" element={<Schedule />} />
           <Route path="/terms" element={<Disclosure />} />

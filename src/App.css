@@ -3,20 +3,22 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  /* background: linear-gradient(-80deg, #edaaaabd, #3c2323); */
-  background: repeating-linear-gradient(to bottom , #5e4670bd, #cdb2e1bd 6%, rgba(255, 226, 63, 0.857)10%, #b2aaedbd 21%);
-
+  background: repeating-linear-gradient(to right, #eb95e4 ,
+  #9a2ecb 13%,
+  #1a7968 44%,
+  #edba55 75% ,
+  #a4394f )
 }
 
 
-  /* body {
+/* body {
     display: flex4
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
   } */
-  
+
 /* .logo {
   height: 6em;
   padding: 1.5em;
@@ -52,4 +54,3 @@
 .read-the-docs {
   color: #888;
 } */
-

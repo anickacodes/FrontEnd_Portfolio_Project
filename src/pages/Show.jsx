@@ -1,16 +1,16 @@
-import Style from "../components/Style"
+import { useParams } from "react-router-dom";
+import Style from "../components/Style";
 
+const Show = ({ selectedStyleById }) => {
+  const { id } = useParams();
+  
 
-const Show = ( ) => {
+  return (
+    <div>
+      <h2> Shoooooowww </h2>
+      <Style id={id} selectedStyleById={selectedStyleById} />
+    </div>
+  );
+};
 
-
-    return (
-        <div>
-            <h2> Shoooooowww </h2>
-            <Style />
-        </div>
-    )
-}
-
-
-export default Show 
+export default Show;
