@@ -1,9 +1,17 @@
-
-
 .each_style {
-    /* width: 30%;
-    height: 60%; */
-    object-fit: contain;
+    display: flex;
     border: 1px solid white;
     border-radius: .5em;
+}
+
+
+img {
+    border: 4px white inset;
+    max-width: 100%; 
+    height: auto;
+}
+
+.styleKeys {
+    border: 2PX SOLID teal;
+   
 }

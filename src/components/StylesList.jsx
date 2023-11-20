@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/StylesList.css";
 import localData from "../data/styles.json";
 
-const StylesList = ({ styleById }) => {
+const StylesList = () => {
   const navigate = useNavigate();
   const { id: selectedStyleById } = useParams();
   const API = import.meta.env.VITE_API_PORT;
@@ -38,7 +38,11 @@ const StylesList = ({ styleById }) => {
       <section className="stylesList-container" key={selectedStyleById}>
         {styles.map(({ id, category, service, image_url }) => (
           <div className="stylesIndex_card" key={id}>
-            <Link className="styles_link" to={`/styles/${id}`} state={{ style: { id, category, service, image_url } }}>
+            <Link
+              className="styles_link"
+              to={`/styles/${id}`}
+              state={{ style: { id, category, service, image_url } }}
+            >
               <img className="styles_images" src={image_url} alt={category} />
               &nbsp;
               <br />
@@ -48,7 +52,6 @@ const StylesList = ({ styleById }) => {
               </span>
             </Link>
             <br />
-            <button>❌</button>
           </div>
         ))}
       </section>

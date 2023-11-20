@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/Style.css";
 
 const Style = () => {
   const API = import.meta.env.VITE_API_PORT;
+  const navigate = useNavigate();
   const { id } = useParams();
-  console.log(id);
   const [style, setStyle] = useState({});
 
   useEffect(() => {
@@ -24,24 +24,35 @@ const Style = () => {
   const handleDelete = () => {
     alert("Delete Style?");
     console.log(`Deleting style with id ${id}`);
+    deleteStyle();
+  };
+
+  const deleteStyle = () => {
+    fetch(`${API}/styles/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => navigate(`/styles`))
+      .catch((error) => console.error(error));
   };
 
   return (
     <div className="each_style">
-      <h3>Style: {id}</h3>
+      <h3>Style: {style.service}</h3>
 
       {style && Object.keys(style).length > 0 && (
-        <div>
-          <span>Category: {style.category} </span>
-          <span>Service: {style.service}</span>
-          <span>
-            {" "}
-            Image: <img src={style.image_url} alt="image" />
-          </span>
-          <span> Description: {style.description}</span>
+        <div className="styleObj">
+          <img src={style.image_url} alt="image" />
+          <br />
+          <div className="styleKeys">
+            <span>Category: {style.category} </span>
+            <br />
+            <span> Description: {style.description}</span>
+          </div>
         </div>
       )}
-
+      <Link to={"/styles"}>
+        <button>Back</button>
+      </Link>
       <button onClick={handleDelete}>Delete</button>
     </div>
   );
