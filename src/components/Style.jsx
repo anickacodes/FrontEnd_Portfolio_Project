@@ -35,6 +35,10 @@ const Style = () => {
       .catch((error) => console.error(error));
   };
 
+  const handleEdit = () => {
+    navigate(`/styles/${id}/edit`, { state: { style } });
+  };
+
   return (
     <div className="each_style">
       <h3>Style: {style.service}</h3>
@@ -54,6 +58,7 @@ const Style = () => {
         <button>Back</button>
       </Link>
       <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleEdit}>Edit</button>
     </div>
   );
 };

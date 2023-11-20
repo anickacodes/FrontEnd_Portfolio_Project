@@ -1,18 +1,17 @@
 .stylesList-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 24px;
-  /* border:  gold solid; */
+  row-gap: 32px;
   margin: 20px;
   padding: 11px;
 }
 
 .styles_images {
-  width: 30%;
-  height: 60%;
+  width: 150px;
+  height: 200px;
   object-fit: cover;
   border: 1px solid white;
-  border-radius: .5em;
+  border-radius: 8px;
 }
 
 .stylesIndex_card {
@@ -36,7 +35,6 @@
     }
 
     .styles_images {
-      width: 75%; 
-     
+      width: 150px; 
     }
   }
