@@ -1,92 +1,128 @@
 [
   {
-    "id": 1,
-    "category": "Knotless",
-    "service": "Medium-Knotless-Braids",
-    "duration": "02:00:00",
-    "description": " ",
-    "price": "205",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8v8hBd0f5H53LQ-BGcircjRALai9ETD4bg&usqp=CAU"
+  "id": 1,
+  "category": "Knotless",
+  "service": "Medium-Knotless-Braids",
+  "duration": "02:00:00",
+  "description": " ",
+  "price": "205",
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8v8hBd0f5H53LQ-BGcircjRALai9ETD4bg&usqp=CAU"
   },
   {
-    "id": 2,
-    "category": "Knotless",
-    "service": "Large-Knotless-Braids",
-    "duration": "01:30:00",
-    "description": " ",
-    "price": "185",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Y1HX7iJld9wWgF3w02HSljH7yAIBG8gGzA&usqp=CAU"
+  "id": 2,
+  "category": "Knotless",
+  "service": "Large-Knotless-Braids",
+  "duration": "01:30:00",
+  "description": " ",
+  "price": "185",
+  "image_url": "https://static.glossgenius.com/public/service/6b5caba1803bab28b07b06091c24a1df817892c0/image/2584441c77e7835f33f58d42f95bdc9a.jpg"
   },
   {
-    "id": 3,
-    "category": "Crochet",
-    "service": "Twists Crochet",
-    "duration": "01:45:00",
-    "description": " ",
-    "price": "100",
-    "image_url": "https://i0.wp.com/www.atsavvy.com/wp-content/uploads/2022/01/53121B52-3A31-4267-87DE-2DDE37B9DCF2-scaled.jpeg?resize=1020%2C1275&ssl=1"
+  "id": 3,
+  "category": "Crochet",
+  "service": "Twists Crochet",
+  "duration": "01:45:00",
+  "description": " ",
+  "price": "100",
+  "image_url": "https://braidhairstyles.com/wp-content/uploads/2022/08/Spring-Twists-Crochet-Hair-819x1024.jpeg"
   },
   {
-    "id": 4,
-    "category": "Crochet",
-    "service": "Invisible Crochet Locs",
-    "duration": "01:55:00",
-    "description": " ",
-    "price": "100",
-    "image_url": "https://content.latest-hairstyles.com/wp-content/uploads/half-braided-crochet-hair.jpg"
+  "id": 4,
+  "category": "Crochet",
+  "service": "Invisible Crochet Locs",
+  "duration": "01:55:00",
+  "description": " ",
+  "price": "100",
+  "image_url": "https://content.latest-hairstyles.com/wp-content/uploads/half-braided-crochet-hair.jpg"
   },
   {
-    "id": 5,
-    "category": "Traditional",
-    "service": "Medium Box Braids",
-    "duration": "04:55:00",
-    "description": " ",
-    "price": "185",
-    "image_url": "https://i.redd.it/rkpbxcfsot261.png"
+  "id": 5,
+  "category": "Traditional",
+  "service": "Medium Box Braids",
+  "duration": "04:55:00",
+  "description": " ",
+  "price": "185",
+  "image_url": "https://i.redd.it/rkpbxcfsot261.png"
   },
   {
-    "id": 6,
-    "category": "Traditional",
-    "service": "Large Box Braids",
-    "duration": "04:00:00",
-    "description": " ",
-    "price": "170",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCytJEwyyFxL19IR5U9zy_QsLXpKJRkIi5pg&usqp=CAU"
+  "id": 6,
+  "category": "Traditional",
+  "service": "Large Box Braids",
+  "duration": "04:00:00",
+  "description": " ",
+  "price": "170",
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCytJEwyyFxL19IR5U9zy_QsLXpKJRkIi5pg&usqp=CAU"
   },
   {
-    "id": 7,
-    "category": "Natural",
-    "service": "Straight Backs",
-    "duration": "00:20:00",
-    "description": " ",
-    "price": "45",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Ny22M8jvP2c2cjVCNwacvz680CNuNWOwECWn_beAngc9x2qMiukoRpUVtK64C_iH9pY&usqp=CAU"
+  "id": 7,
+  "category": "Natural",
+  "service": "Straight Backs",
+  "duration": "00:20:00",
+  "description": " ",
+  "price": "45",
+  "image_url": "https://images.squarespace-cdn.com/content/v1/5cda18bc840b16b1970eb444/1592196138415-X8TUYVTK379T2G2ZTIWH/IMG_1741.jpg"
   },
   {
-    "id": 8,
-    "category": "Natural",
-    "service": "Stitch Straight Backs",
-    "duration": "00:30:00",
-    "description": " ",
-    "price": "55",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj0BK4d8LJRIWdYbYYe1LtMXRGDgBHTzmOecrA1lvsdefZDfyWlprfV5ViHlgMPCxDqvQ&usqp=CAU"
+  "id": 8,
+  "category": "Natural",
+  "service": "Stitch Straight Backs",
+  "duration": "00:30:00",
+  "description": " ",
+  "price": "55",
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Ny22M8jvP2c2cjVCNwacvz680CNuNWOwECWn_beAngc9x2qMiukoRpUVtK64C_iH9pY&usqp=CAU"
   },
   {
-    "id": 9,
-    "category": "Natural",
-    "service": "Starter Locs",
-    "duration": "01:35:00",
-    "description": " ",
-    "price": "80",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj0BK4d8LJRIWdYbYYe1LtMXRGDgBHTzmOecrA1lvsdefZDfyWlprfV5ViHlgMPCxDqvQ&usqp=CAU"
+  "id": 9,
+  "category": "Natural",
+  "service": "Starter Locs",
+  "duration": "01:35:00",
+  "description": " ",
+  "price": "75",
+  "image_url": "https://i.pinimg.com/736x/f6/8e/67/f68e676f297d6f37c5298aae39aad2b4.jpg"
   },
   {
-    "id": 10,
-    "category": "Natural",
-    "service": "Loc Retwist",
-    "duration": "01:05:00",
-    "description": " ",
-    "price": "100",
-    "image_url": "https://i0.wp.com/www.atsavvy.com/wp-content/uploads/2022/01/53121B52-3A31-4267-87DE-2DDE37B9DCF2-scaled.jpeg?resize=1020%2C1275&ssl=1"
+  "id": 10,
+  "category": "Natural",
+  "service": "Loc Palm Retwist",
+  "duration": "01:05:00",
+  "description": " ",
+  "price": "90",
+  "image_url": "https://static.glossgenius.com/public/service/1105054/image/image.jpg"
+  },
+  {
+  "id": 11,
+  "category": "test",
+  "service": "test",
+  "duration": "20:20:20",
+  "description": "test ",
+  "price": "205",
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8v8hBd0f5H53LQ-BGcircjRALai9ETD4bg&usqp=CAU"
+  },
+  {
+  "id": 12,
+  "category": null,
+  "service": "",
+  "duration": "04:02:00",
+  "description": "",
+  "price": null,
+  "image_url": ""
+  },
+  {
+  "id": 13,
+  "category": null,
+  "service": "shampoo",
+  "duration": "12:04:00",
+  "description": "",
+  "price": null,
+  "image_url": "https://target.scene7.com/is/image/Target/GUEST_be4a1f06-300e-4214-8fae-629de0fb2beb?qlt=65&fmt=webp&hei=350&wid=350"
+  },
+  {
+  "id": 18,
+  "category": null,
+  "service": "condition -test",
+  "duration": "10:00:00",
+  "description": "",
+  "price": null,
+  "image_url": "https://img.freepik.com/free-vector/realistic-broken-prison-bars-isolated-transparent-background-jail-break-concept_33099-417.jpg?w=1480&t=st=1699514711~exp=1699515311~hmac=cbac2302a0eea7786f30d5ece8e187d0d3b7c168bbcf77f1150273cc2f11a4ea"
   }
-]
+  ]

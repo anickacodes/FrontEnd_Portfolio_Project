@@ -7,8 +7,9 @@ const AddStyleForm = () => {
     name: "",
     image_url: "",
     service: "",
+    phone: '',
     date: "",
-    duration: "00:00:00",
+    duration: "",
     description: "",
     agreement: "",
   });
@@ -49,25 +50,26 @@ const AddStyleForm = () => {
       <div>
         <h3> Appointment Request Form </h3>
         <form className="book-form" onSubmit={handleSubmit}>
-          <label htmlFor="name"> Name: </label>
+          <label htmlFor="name"> *Name: </label>
           <input
             type="text"
             id="name"
             onChange={(se) => handleInputs(se)}
             value={form.name}
             placeholder="Name: "
+            required
           />
 
-          <label htmlFor="image"> Image: </label>
+          <label htmlFor="image"> Image Url: </label>
           <input
             type="url"
             id="image_url"
             onChange={(se) => handleInputs(se)}
             value={form.image_url}
-            placeholder="add image"
+            placeholder="add image for style reference"
           />
 
-          <label htmlFor="service"> Service: </label>
+          <label htmlFor="service"> Style Name: </label>
           <input
             type="text"
             id="service"
@@ -76,7 +78,7 @@ const AddStyleForm = () => {
             placeholder="service: "
           />
 
-          <label htmlFor="duration"> duration: </label>
+          <label htmlFor="duration"> *Request Time: </label>
           <input
             type="time"
             id="duration"
@@ -85,7 +87,19 @@ const AddStyleForm = () => {
             placeholder="duration: "
           />
 
-          <label htmlFor="date"> Date: </label>
+
+<label htmlFor="phone"> *Contact Number: </label>
+          <input
+            type="tel"
+            id="phone"
+            onChange={(se) => handleInputs(se)}
+            value={form.phone}
+            placeholder="mobile number: "
+            required
+          />
+
+
+          <label htmlFor="date"> *Requested Date: </label>
           <input
           id="date"
             type="date"
@@ -118,7 +132,7 @@ const AddStyleForm = () => {
                 All information on this form is filled out correctly, to the
                 best of my knowledge. By choosing 'Agree', I have read,
                 understand and agree to the{" "}
-                <Link href="/terms">Terms & Conditions</Link>.
+                <Link to="/terms">Terms & Conditions</Link>.
               </span>
               <br />
 

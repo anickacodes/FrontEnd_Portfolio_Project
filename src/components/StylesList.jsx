@@ -10,6 +10,7 @@ const StylesList = () => {
   const [styles, setStyles] = useState([]);
 
   useEffect(() => {
+    let apiFetchTimeout;
     const fetchLocalData = async () => {
       try {
         setStyles(localData);
@@ -19,8 +20,14 @@ const StylesList = () => {
       }
     };
 
+    apiFetchTimeout = setTimeout(() => {
+      // If the timeout is reached, invoke fetchLocalData
+      fetchLocalData();
+    }, 20000);
+
     fetch(`${API}/styles`)
       .then((r) => {
+        clearTimeout(apiFetchTimeout);
         if (!r.ok) {
           throw new Error("Network response was not ok");
         }
@@ -29,7 +36,7 @@ const StylesList = () => {
       .then((data) => setStyles(data))
       .catch((apiError) => {
         console.error("Error fetching from API", apiError);
-        fetchLocalData();
+        // fetchLocalData();
       });
   }, [API, navigate]);
 
