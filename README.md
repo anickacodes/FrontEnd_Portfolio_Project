@@ -1,8 +1,29 @@
-# React + Vite
+# CLN Styles
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app is a client to stylist booking request site
 
-Currently, two official plugins are available:
+On arrival [home page](https://clnstylez.netlify.app/) users, are greeted 🎉
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Navbar offers navigation to
+>`Home Page` : basic home page houses logo & easter egg
+
+>`Styles Page` : style cards showcasing service name, category and image
+
+>`Calendar Page` : functional calendar where users can book future dates
+* _if a user attempts to book a past date, an alert informs them otherwise_
+* _upon date selection, a modal pops up where a user fills in a request form_
+* _radio buttons allow user to agree/disagree_
+* _upon submission of form, user is alerted their request has been sent_
+* _A `terms & conditions` link, directs user to the `terms` page_
+  
+>`New Style Page` : **debateable**
+
+A `Footer` appears on all pages 
+
+An `About Page` shows Author contact information, link to projects & .... 👀
+
+
+## stretch goals: 
+>connect two user tables ... in progress
+>confetti library
+>local storage to house `styles` in case fetch timesout or errors
