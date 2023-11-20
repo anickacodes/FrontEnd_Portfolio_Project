@@ -23,20 +23,20 @@
   margin: 20px 0 1px 0;
 }
 
+  @media screen and (max-width: 758px) {
+    .stylesList-container {
+      flex-direction: column;
+      align-items: stretch;
+      grid-template-columns: 1fr;
+    }
 
-/* @media screen and (max-width: 600px) {
+    .stylesIndex_card {
+      width: 90%; 
+      margin: 12px; 
+    }
 
-
-.stylesList-container {
-    grid-template-columns: 1fr; 
+    .styles_images {
+      width: 75%; 
+     
+    }
   }
-
-  .stylesIndex_card {
-    width: 90%; 
-    margin: 10px; 
-  }
-
-  img {
-    width: 100%; 
-  }
-} */
