@@ -11,7 +11,7 @@ import Error from "./pages/Error";
 import Show from "./pages/Show";
 import Footer from "./components/Footer";
 import Disclosure from "./pages/Disclosure";
-import Edit from "./pages/EditStyle";
+import EditStyle from "./pages/EditStyle";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/styles" element={<Index />} />
           <Route path="/styles/:id" element={<Show />} />
-          <Route path="/styles/:id/edit" element={<Edit />} />
+          <Route path="/styles/:id/edit" element={<EditStyle />} />
           {/* <Route path="/styles/:id/clients" element={<Clients />} /> */}
           <Route path="/styles/new" element={<New />} />
           <Route path="/about" element={<About />} />
