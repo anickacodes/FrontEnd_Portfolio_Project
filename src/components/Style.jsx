@@ -25,6 +25,7 @@ const Style = () => {
         console.error("Error fetching style data", error);
         setFetchErr(error.message);
         setStyle(localData.find((localStyle) => localStyle.id === id) || {});
+        // console.log(localData)
       }
     };
     fetchData();
@@ -48,6 +49,7 @@ const Style = () => {
     navigate(`/styles/${id}/edit`, { state: { style } });
   };
 
+
   return (
     <div className="each_style">
       <h3>Style: {style.service}</h3>
@@ -67,11 +69,19 @@ const Style = () => {
               </div>
             </div>
           )}
-          <Link to={"/styles"}>
-            <button>Back</button>
-          </Link>
-          <button onClick={handleDelete}>Delete</button>
-          <button onClick={handleEdit}>Edit</button>
+          <div className="style_buttons">
+            <Link to={"/styles"}>
+              <button>Back</button>
+            </Link>
+
+            <button onClick={handleDelete}>Delete</button>
+            <button onClick={handleEdit}>Edit</button>
+
+            <Link to={`/styles/${id}/clients`} state={{style}}>
+              {" "}
+              <button>Client List</button>{" "}
+            </Link>
+          </div>
         </>
       )}
     </div>

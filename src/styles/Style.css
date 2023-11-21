@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid white;
-    border-radius: .5em;
+    border-radius: 11px;
 }
 
 img {
@@ -10,10 +10,21 @@ img {
     width: 150px;
     height: 200px;
     height: auto;
+    border-radius: 11px;
+
 }
 
 .styleKeys {
     border: 2PX SOLID teal;
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+.style_buttons {
+    display: inherit;
+    justify-content: space-around;
+    margin: 22px;
 }
 
 @media screen and (max-width: 768px) {
