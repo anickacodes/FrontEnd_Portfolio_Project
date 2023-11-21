@@ -1,25 +1,35 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/Style.css";
+import localData from '../data/styles.json'
 
 const Style = () => {
   const API = import.meta.env.VITE_API_PORT;
   const navigate = useNavigate();
   const { id } = useParams();
   const [style, setStyle] = useState({});
+  const [fetchErr, setFetchErr] = useState(null)
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${API}/styles/${id}`);
-        const data = await response.json();
-        setStyle(data);
-      } catch (error) {
-        console.error("Error fetching style data", error);
+
+      const fetchData = async () => {
+        try {
+          const response = await Promise.race([
+            fetch(`${API}/styles/${id}`),
+            new Promise((_, reject) =>
+              setTimeout(() => reject(new Error("Timeout")), 12000) 
+            ),
+          ]);
+          const data = await response.json();
+          setStyle(data);
+        } catch (error) {
+          console.error("Error fetching style data", error);
+          setFetchErr(error.message);
+          setStyle(localData.find((localStyle) => localStyle.id === id) || {});
+        }
       }
-    };
     fetchData();
-  }, [id]);
+  }, [API, id]);
 
   const handleDelete = () => {
     alert("Delete Style?");
@@ -43,7 +53,7 @@ const Style = () => {
     <div className="each_style">
       <h3>Style: {style.service}</h3>
 
-      {style && Object.keys(style).length > 0 && (
+      {/* {style && Object.keys(style).length > 0 && (
         <div className="styleObj">
           <img src={style.image_url} alt="image" />
           <br />
@@ -53,12 +63,29 @@ const Style = () => {
             <span> Description: {style.description}</span>
           </div>
         </div>
+      )} */}
+{fetchErr ? (
+        <p>Error fetching data: {fetchErr}</p>
+      ) : (
+        <>
+          {style && Object.keys(style).length > 0 && (
+            <div className="styleObj">
+              <img src={style.image_url} alt="image" />
+              <br />
+              <div className="styleKeys">
+                <span>Category: {style.category} </span>
+                <br />
+                <span> Description: {style.description}</span>
+              </div>
+            </div>
+          )}
+          <Link to={"/styles"}>
+            <button>Back</button>
+          </Link>
+          <button onClick={handleDelete}>Delete</button>
+          <button onClick={handleEdit}>Edit</button>
+        </>
       )}
-      <Link to={"/styles"}>
-        <button>Back</button>
-      </Link>
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={handleEdit}>Edit</button>
     </div>
   );
 };

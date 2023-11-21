@@ -11,7 +11,7 @@ import Error from "./pages/Error";
 import Show from "./pages/Show";
 import Footer from "./components/Footer";
 import Disclosure from "./pages/Disclosure";
-import Edit from "./pages/Edit";
+import Edit from "./pages/EditStyle";
 
 function App() {
   return (
