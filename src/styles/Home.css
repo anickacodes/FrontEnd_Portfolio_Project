@@ -1,22 +1,43 @@
 .wrapper {
-    padding: 22px;
-    margin: 11px;
+    padding: 10px;
     background-image: url('../assets/cnl.jpeg');
     background-position: center;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    filter: brightness(77%) contrast(90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home {
     height: 100vh;
-    /* height: 500px; */
-    margin: 20px;
 }
 
 .greeting {
     color: teal;
     font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    border: 2px coral outset;
-    padding: 22px;
+    width: fit-content;
+    border: 4px rgba(236, 151, 120, 0.821) outset;
+    padding: 30px;
+}
+
+button {
+    font-size: 28px;
+    background: repeating-linear-gradient(to right, #eb95e4,
+            #9a2ecb 13%,
+            #1a7968 44%,
+            #edba55 75%,
+            #a4394f)
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 10px;
+        margin: 5px;
+        background-size: contain;
+        background-repeat: repeat;
+        width: 100%;
+    }
 }

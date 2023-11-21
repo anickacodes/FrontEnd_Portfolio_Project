@@ -8,14 +8,14 @@ const Home = () => {
   const [celebrate, setCelebrate] = useState(false);
 
   const confettiConfig = {
-    angle: 620,
+    angle: 600,
     spread: 50,
     startVelocity: 14,
     elementCount: 220,
     dragFriction: 0.422,
     duration: 7133,
-    stagger: 11,
-    width: "48%",
+    stagger: 8,
+    width: "44%",
     height: "24%",
     colors: ["#4d188e", "#1a7968", "#ffe065", "#a4394f", "#a3f77f"],
   };

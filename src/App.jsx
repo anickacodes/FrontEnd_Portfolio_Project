@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
@@ -12,6 +11,7 @@ import Show from "./pages/Show";
 import Footer from "./components/Footer";
 import Disclosure from "./pages/Disclosure";
 import EditStyle from "./pages/EditStyle";
+import ClientList from "./components/ClientList";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path="/styles" element={<Index />} />
           <Route path="/styles/:id" element={<Show />} />
           <Route path="/styles/:id/edit" element={<EditStyle />} />
-          {/* <Route path="/styles/:id/clients" element={<Clients />} /> */}
+          <Route path="/styles/:id/clients" element={<ClientList />} />
           <Route path="/styles/new" element={<New />} />
           <Route path="/about" element={<About />} />
           <Route path="/book" element={<Schedule />} />
