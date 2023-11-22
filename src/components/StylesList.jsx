@@ -19,9 +19,7 @@ const StylesList = () => {
         navigate("/error");
       }
     };
-
     apiFetchTimeout = setTimeout(() => {
-      // If the timeout is reached, invoke fetchLocalData
       fetchLocalData();
     }, 20000);
 
@@ -36,14 +34,13 @@ const StylesList = () => {
       .then((data) => setStyles(data))
       .catch((apiError) => {
         console.error("Error fetching from API", apiError);
-        // fetchLocalData();
+     
       });
   }, [API, navigate]);
 
   return (
     <div>
       <Link to={"/styles/new"}>
-        
         <button>Add New Style</button>{" "}
       </Link>
 

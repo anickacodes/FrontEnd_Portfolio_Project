@@ -9,7 +9,6 @@ const Style = () => {
   const { id } = useParams();
   const [style, setStyle] = useState({});
   const [fetchErr, setFetchErr] = useState(null);
-  const [value, setValue] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,16 +50,11 @@ const Style = () => {
     navigate(`/styles/${id}/edit`, { state: { style } });
   };
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
   const localStyle =
     localData.find((localStyle) => localStyle.id === parseInt(id)) || {};
 
   return (
     <div className="each_style">
-     
       <>
         {style && Object.keys(style).length > 0 ? (
           <div className="styleObj">
@@ -69,8 +63,10 @@ const Style = () => {
             <div className="styleKeys">
               <span>Service:</span> {style.service}
               <br />
-              <span> Description:</span> {style.description}<br />
-              <span> Allotted time:</span> {style.duration}<br />
+              <span> Description:</span> {style.description}
+              <br />
+              <span> Allotted time:</span> {style.duration}
+              <br />
               <span> Price: ${style.price}</span>
             </div>
           </div>
@@ -93,14 +89,12 @@ const Style = () => {
           <Link to={"/styles"}>
             <button className="style_buttons">Back</button>
           </Link>
-
           <button className="style_buttons" onClick={handleDelete}>
             Delete
           </button>
           <button className="style_buttons" onClick={handleEdit}>
             Edit
           </button>
-
           <Link to={`/styles/${id}/clients`} state={{ style }}>
             {" "}
             <button className="style_buttons">Client List</button>{" "}

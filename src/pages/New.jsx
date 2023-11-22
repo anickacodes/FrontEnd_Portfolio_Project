@@ -1,11 +1,7 @@
-import BookStyleForm from "../components/BookStyleForm"
-
+import BookStyleForm from "../components/BookStyleForm";
 
 const New = () => {
+  return <BookStyleForm />;
+};
 
-    return (
-        <BookStyleForm />
-    )
-}
-
-export default New
+export default New;

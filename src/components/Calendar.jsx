@@ -51,7 +51,6 @@ const Calendar = () => {
         </div>
       );
     }
-
     return <div className="days row">{days}</div>;
   };
 
@@ -132,7 +131,6 @@ const Calendar = () => {
           </div>
         </div>
       )}
-      {/* <AddStyleForm selectedDate={selectedDate} /> */}
     </div>
   );
 };
