@@ -4,7 +4,7 @@
   font-weight: 400;
 margin: 2px;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(196, 170, 170, 0.87);
   /* background-color: #edaaaabd; */
 
   font-synthesis: none;
@@ -24,14 +24,18 @@ a:hover {
   color: teal;
 }
 
- /* body {
+ body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  height: 100vh;
-  background: linear-gradient(to bottom right, #edaaaabd, #ffffff)
-} */
+  /* display: flex; */
+  /* place-items: center; */
+  /* min-width: 520px; */
+  /* height: 100vh; */
+  background: repeating-linear-gradient( #eb95e4,
+  #9a2ecb 13%,
+  #1a7968 44%,
+  #edba55 75%,
+  #a4394f)
+}
 
 /* h1 {
   font-size: 3.2em;
