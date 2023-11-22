@@ -60,32 +60,18 @@ const Style = () => {
 
   return (
     <div className="each_style">
-      <div>
-        <label>
-          Category: {style.category}
-          <select value={value} onChange={handleChange}>
-            <option value="default"></option>
-            <option value={style.service}></option>
-            <option value="default"></option>
-            <option value="default"></option>
-            <option value="default"></option>
-          </select>
-        </label>
-        {value}
-      </div>
+     
       <>
         {style && Object.keys(style).length > 0 ? (
           <div className="styleObj">
             <img src={style.image_url} alt="image" />
             <br />
             <div className="styleKeys">
-              <span>Service:</span> {style.service} 
+              <span>Service:</span> {style.service}
               <br />
-              <span> Description:</span> {style.description}
-              <span> Allotted time:</span> {style.duration}
-              <span> Price: $ {style.price}</span>
-
-
+              <span> Description:</span> {style.description}<br />
+              <span> Allotted time:</span> {style.duration}<br />
+              <span> Price: ${style.price}</span>
             </div>
           </div>
         ) : (

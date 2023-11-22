@@ -1,46 +1,62 @@
 .each_style {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid white;
     border-radius: 11px;
-    width: fit-content;
-    /* height: fit-content; */
-    padding: 44px;
+    width: 80%;
+    padding: 20px;
     margin: auto;
 }
 
-img {
-    margin: 22px;
+.styleObj {
+    text-align: center;
+    gap: 20px;
+
+}
+
+.styleObj img {
+    margin: 20px;
     padding: 2px;
     border: 4px white inset;
-    width: 150px;
-    height: 200px;
+    max-width: 333px;
     height: auto;
     border-radius: 11px;
-    position: relative;
 }
 
 .styleKeys {
-    width: fit-content;
-    font-size: 22px;
+    width: 100%;
+    font-size: 18px;
     font-weight: bold;
     padding: 10px;
     color: black;
     border: 2px solid blue;
-    display: flex;
-    flex-direction: column;
+    margin-top: 10px;
 }
 
-span {
+.styleKeys span {
+    margin-bottom: 10px;
     color: rgb(202, 196, 194);
+}
+
+.feature_buttons {
     display: flex;
-    align-content: left;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
 }
 
-.feature_buttons,
 .style_buttons {
-    margin: 22px;
+    padding: 10px;
+    font-size: 16px;
 }
 
+@media screen and (max-width: 768px) {
+    .each_style {
+        width: 90%;
+    }
 
-
-@media screen and (max-width: 768px) {}
+    .styleKeys {
+        font-size: 16px;
+    }
+}

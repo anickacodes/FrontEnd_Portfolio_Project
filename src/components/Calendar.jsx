@@ -17,7 +17,7 @@ import AddStyleForm from "./BookStyleForm";
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
-  const [visibleForm, setVisibleForm] = useState(false)
+  const [visibleForm, setVisibleForm] = useState(false);
 
   const header = () => {
     const dateFormat = "MMMM yyyy";
@@ -125,7 +125,9 @@ const Calendar = () => {
       {visibleForm && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={closeForm}>&times;</span>
+            <span className="close" onClick={closeForm}>
+              &times;
+            </span>
             <AddStyleForm selectedDate={selectedDate} />
           </div>
         </div>

@@ -1,0 +1,37 @@
+
+.edit_style {
+    /* Your styles for the parent container */
+  }
+  
+  .edit_style img {
+    max-width: 100%;
+  }
+  
+  .edit_style form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .edit_style label {
+
+  }
+  
+  .edit_style select,
+  .edit_style input,
+  .edit_style textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 9px;
+  }
+  
+  .edit_style button {
+    /* Your styles for the button */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

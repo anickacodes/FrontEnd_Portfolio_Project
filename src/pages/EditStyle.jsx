@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import '../styles/EditStyle.css'
 
 const EditStyle = () => {
   const {
@@ -51,15 +52,21 @@ const EditStyle = () => {
   return (
     <div className="edit_style">
       <h3>Edit Page</h3>
+      <img src={editStyle.image_url} alt="style image" />
       <form onSubmit={handleSubmit}>
         <label>
           Category:
-          <input
-            type="text"
-            name="category"
+          <select
             value={editStyle.category}
             onChange={handleInputChange}
-          />
+            name="category"
+          >
+            <option value="default"></option>
+            <option value="Crochet">Crochet</option>
+            <option value="Natural">Natural</option>
+            <option value="Knotless">Knotless</option>
+            <option value="Traditional">Traditional</option>
+          </select>
         </label>
         <br />
         <label>
@@ -73,13 +80,16 @@ const EditStyle = () => {
         </label>
         <br />
         <label>
-          Description:
-          <textarea
-            name="description"
-            value={editStyle.description}
+          Price:
+          <input
+            id="price"
+            type="text"
+            max={5}
+            name="price"
+            value={editStyle.price}
             onChange={handleInputChange}
           />
-        </label>
+        </label>{" "}
         <br />
         <label>
           Alotted Time:
@@ -93,16 +103,13 @@ const EditStyle = () => {
         </label>{" "}
         <br />
         <label>
-          Price:
-          <input
-            id="price"
-            type="text"
-           max={5}
-            name="price"
-            value={editStyle.price}
+          Description:
+          <textarea
+            name="description"
+            value={editStyle.description}
             onChange={handleInputChange}
           />
-        </label>{" "}
+        </label>
         <br />
         <button type="submit">Save Changes</button>
       </form>
