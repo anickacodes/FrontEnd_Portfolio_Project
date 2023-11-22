@@ -16,7 +16,7 @@ Navbar offers navigation to
 * _upon submission of form, user is alerted their request has been sent_
 * _A `terms & conditions` link, directs user to the `terms` page_
   
->`New Style Page`(/new) : **debateable**
+>`New Style Page`(/new) : Only available via `/styles` page
 
 >A `Footer` appears on all pages 
 
