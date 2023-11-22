@@ -87,7 +87,7 @@ const Style = () => {
         )}
         <div className="feature_buttons">
           <Link to={"/styles"}>
-            <button className="style_buttons">Back</button>
+            <button className="style_buttons"> Back </button>
           </Link>
           <button className="style_buttons" onClick={handleDelete}>
             Delete

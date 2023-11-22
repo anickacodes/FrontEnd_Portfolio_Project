@@ -28,15 +28,20 @@ const Home = () => {
 
   return (
     <div className="wrapper">
+          <Confetti active={setCelebrate} config={confettiConfig} />
+      
       <div className="home">
+        
         <h2 className="greeting">
           <button onClick={handleClick}>
             Welcome to our Grand Opening Site
           </button>
-          <Confetti active={setCelebrate} config={confettiConfig} />
         </h2>
+        
       </div>
+      
     </div>
+    
   );
 };
 

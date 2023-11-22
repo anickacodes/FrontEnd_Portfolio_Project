@@ -1,10 +1,8 @@
 .wrapper {
-    padding: 10px;
     background-image: url('../assets/cnl.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
     filter: brightness(74%) contrast(92%);
     display: flex;
     align-items: center;
@@ -18,7 +16,6 @@
 .greeting {
     color: teal;
     font-weight: bolder;
-    width: fit-content;
     border: 4px rgba(236, 151, 120, 0.821) outset;
     padding: 30px;
 }
@@ -34,8 +31,6 @@ button {
 
 @media (max-width: 768px) {
     .wrapper {
-        padding: 10px;
-        margin: 5px;
         background-size: contain;
         background-repeat: repeat;
         width: 100%;
