@@ -1,4 +1,6 @@
-ul {
+
+
+section {
     list-style-type: circle;
     display: flex;
     flex-direction: column;

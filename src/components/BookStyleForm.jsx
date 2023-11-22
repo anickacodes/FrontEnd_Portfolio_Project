@@ -48,7 +48,7 @@ const AddStyleForm = () => {
   return (
     <>
       <div>
-        <h3> Appointment Request Form </h3>
+        <h3> Multi-Purpose Form </h3>
         <form className="book-form" onSubmit={handleSubmit}>
           <label htmlFor="name"> *Name: </label>
           <input
