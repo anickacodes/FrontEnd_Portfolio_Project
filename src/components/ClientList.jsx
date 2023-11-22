@@ -31,11 +31,13 @@ const ClientList = () => {
   }, [API, style.id]);
 
   return (
-    <>
+    <div>
       <div className="clientList_containter">
-        <button>
-          <Link to={`/styles/${id}`}> ⮐ </Link>
-        </button>
+        <div className="back_button">
+          <button>
+            <Link to={`/styles/${id}`}> ⮐ </Link>
+          </button>
+        </div>
         <h2> Client List for</h2>
         <h3>Style: {style.service} Appointments </h3>
         {fetchError ? (
@@ -65,7 +67,7 @@ const ClientList = () => {
           <p>No clients found.</p>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

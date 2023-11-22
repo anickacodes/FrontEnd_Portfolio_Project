@@ -1,13 +1,30 @@
+.about_me {
+    border: 2px inset white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+}
 
+h1,
+h2 {
+    color: rgba(47, 63, 164, 0.887);
+}
 
 section {
     list-style-type: circle;
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+
 }
+
 
 .info {
     text-align: left;
+    font-size: 22px;
+    border: 2px outset teal;
+    border-radius: 20px;
+    width: fit-content;
 }

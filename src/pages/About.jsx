@@ -8,31 +8,30 @@ const About = () => {
         <h1> Showcase </h1>
         <h2> Previous Work </h2>
         <section className="about_section">
-          <h3> Coding</h3>
-          <p> Front End</p>
+        Everybody's so creative!{" "}
           <Link to="https://cereal-killahs.netlify.app/">
             <img
               src={"src/assets/CerealKillahs.png"}
               height="170px"
               alt="cereal"
-            />{" "}
-            Check out the creativity{" "}
+            />{" "} <br/>
+           
           </Link>
-          <p> Back End</p>
-          <a to="https://github.com/anickacodes/Cereal-Killahs-BackEnd">
-            {" "}
+          
+          <a href="https://github.com/anickacodes/Cereal-Killahs-BackEnd">
+            {" "}<br/>
             BackEnd Duo Project{" "}
           </a>
 
-          <p> Group Projects</p>
+          YouTube Clone Group Project<br/>
           <Link to="https://imbad-youtube-clone.netlify.app/">
             {" "}
-            YouTube Clone
-            <img src={"src/assets/youtubeclone.png"} height="100px" alt="yt" />
+           
+            <img src={"src/assets/youtubeclone.png"} height="90px" alt="yt" />
           </Link>
         </section>
 
-        <section>
+        <section className="contact">
           <h2> Contact </h2>
           <ul>
             <li className="info">
