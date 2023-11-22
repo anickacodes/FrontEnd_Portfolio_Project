@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import '../styles/EditStyle.css'
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import "../styles/EditStyle.css";
 
 const EditStyle = () => {
   const {
@@ -111,6 +111,9 @@ const EditStyle = () => {
           />
         </label>
         <br />
+        <Link to={"/styles"}>
+          <button>Back</button>{" "}
+        </Link>
         <button type="submit">Save Changes</button>
       </form>
     </div>

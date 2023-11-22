@@ -1,19 +1,13 @@
-
-.edit_style {
-    /* Your styles for the parent container */
-  }
   
   .edit_style img {
     max-width: 100%;
+    border: 1px solid white;
+    border-radius: 16px;
   }
   
   .edit_style form {
     max-width: 400px;
     margin: auto;
-  }
-  
-  .edit_style label {
-
   }
   
   .edit_style select,
@@ -26,7 +20,6 @@
   }
   
   .edit_style button {
-    /* Your styles for the button */
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;

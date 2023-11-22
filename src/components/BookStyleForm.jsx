@@ -36,13 +36,13 @@ const AddStyleForm = () => {
       if (res.ok) {
         console.log("Request Succesfully sent!");
         alert(
-          "Thank You; Request Succesfully sent! You will be contacted within 24hours."
+          "Thank You for booking; Request Succesfully sent! You will be contacted within 24hours."
         );
       } else {
         console.error(`Error sending form data`);
       }
     } catch (err) {
-      console.error("ERROR", err);
+      console.error("ERROR submitting booking request", err);
     }
   }
   return (

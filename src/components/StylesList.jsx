@@ -42,6 +42,11 @@ const StylesList = () => {
 
   return (
     <div>
+      <Link to={"/styles/new"}>
+        
+        <button>Add New Style</button>{" "}
+      </Link>
+
       <section className="stylesList-container" key={selectedStyleById}>
         {styles.map(({ id, category, service, image_url }) => (
           <div className="stylesIndex_card" key={id}>

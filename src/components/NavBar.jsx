@@ -15,9 +15,6 @@ const NavBar = () => {
         <li className="link b">
           <Link to={"/book"}> Schedule🗓️ </Link>
         </li>
-        {/* <li className="link c">
-          <Link to={"/styles/new"}> Style🖊️ </Link>
-        </li> */}
       </ul>
     </nav>
   );
