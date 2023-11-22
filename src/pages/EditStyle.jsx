@@ -70,6 +70,16 @@ const EditStyle = () => {
         </label>
         <br />
         <label>
+          Image:
+          <input
+            type='url'
+            name="image_url"
+            value={editStyle.image_url}
+            onChange={handleInputChange}
+          />
+        </label>
+        <br/>
+        <label>
           Service:
           <input
             type="text"
