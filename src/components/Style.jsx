@@ -26,7 +26,7 @@ const Style = () => {
         console.error("Error fetching style data", error);
         setFetchErr(error.message);
         setStyle(localData.find((localStyle) => localStyle.id === id) || {});
-        // console.log(localData)
+        console.log(localData)
       }
     };
     fetchData();

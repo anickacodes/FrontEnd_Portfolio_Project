@@ -3,9 +3,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const EditStyle = () => {
   const {
-    state: { style },
+    state: { style }
   } = useLocation();
   const navigate = useNavigate();
+const API = import.meta.env.VITE_API_PORT
 
   const [editStyle, setEditStyle] = useState({
     category: "",
@@ -15,6 +16,7 @@ const EditStyle = () => {
     price: "",
     image_url: "",
   });
+
 
   useEffect(() => {
     if (style) {
@@ -30,9 +32,24 @@ const EditStyle = () => {
     }));
   };
 
-  const handleSubmit = (se) => {
+  const handleSubmit =  async (se) => {
     se.preventDefault();
     console.log("Updated Style:", editStyle);
+    try {
+      const res = await fetch(`${API}/styles/${style.id}`, {
+        method: "PUT", 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(editStyle),
+      })
+      const updatedStyle = await res.json()
+      console.log('style updated', updatedStyle)
+      navigate(`/styles/${style.id}`);
+    } catch (err) {
+      console.error('Error Updating Style', err)
+    }
+
   };
 
   return (
