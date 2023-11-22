@@ -1,18 +1,21 @@
 .clientList_containter {
     border: 2px groove gold;
-    width: max-content;
+    /* width: max-content; */
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-self: center;
     gap: 44px;
     padding: 40px;
+    color: black;
 }
 
 .client_card {
-    border: 4px groove rgb(13, 237, 218);
+    border: 2px groove rgb(13, 237, 218);
     border-radius: 22px;
     padding: 8px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+}
+
+.back_button{
+  
 }

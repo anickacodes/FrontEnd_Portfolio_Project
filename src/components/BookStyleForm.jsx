@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/BookStyleForm.css";
 import { Link } from "react-router-dom";
 
-const AddStyleForm = () => {
+const AddStyleForm = ({selectedDate}) => {
   const [form, setForm] = useState({
     name: "",
     image_url: "",

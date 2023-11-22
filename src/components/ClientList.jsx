@@ -35,10 +35,10 @@ const ClientList = () => {
       <div className="clientList_containter">
         <div className="back_button">
           <button>
-            <Link to={`/styles/${id}`}> ⮐ </Link>
+            <Link to={`/styles/${id}`}> Back ⮐ to Style </Link>
           </button>
         </div>
-        <h2> Client List for</h2>
+        <h2 style={{color: 'black'}}> Client List for</h2>
         <h3>Style: {style.service} Appointments </h3>
         {fetchError ? (
           <p>Error fetching data: {fetchError}</p>
@@ -64,7 +64,7 @@ const ClientList = () => {
             </div>
           ))
         ) : (
-          <p>No clients found.</p>
+          <p style={{color: 'black'}}>No clients found.</p>
         )}
       </div>
     </div>

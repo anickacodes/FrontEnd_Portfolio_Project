@@ -9,6 +9,7 @@ const Style = () => {
   const { id } = useParams();
   const [style, setStyle] = useState({});
   const [fetchErr, setFetchErr] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,6 +38,7 @@ const Style = () => {
     console.log(`Deleting style with id ${id}`);
     deleteStyle();
   };
+  
 
   const deleteStyle = () => {
     fetch(`${API}/styles/${id}`, {
