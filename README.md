@@ -18,9 +18,9 @@ Navbar offers navigation to
   
 >`New Style Page`(/new) : **debateable**
 
-A `Footer` appears on all pages 
+>A `Footer` appears on all pages 
 
-An `About Page`(/about) shows Author contact information, link to projects & .... 👀
+>An `About Page`(/about) shows Author contact information, link to projects & .... 👀
 
 
 ## stretch goals: 
