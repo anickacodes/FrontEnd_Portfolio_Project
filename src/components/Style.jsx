@@ -24,9 +24,10 @@ const Style = () => {
         setStyle(data);
       } catch (error) {
         console.error("Error fetching style data", error);
+        setStyle(
+          localData.find((localStyle) => localStyle.id === parseInt(id)) || {}
+        );
         setFetchErr(error.message);
-        setStyle(localData.find((localStyle) => localStyle.id === id) || {});
-        console.log(localData)
       }
     };
     fetchData();
@@ -54,6 +55,9 @@ const Style = () => {
     setValue(event.target.value);
   };
 
+  const localStyle =
+    localData.find((localStyle) => localStyle.id === parseInt(id)) || {};
+
   return (
     <div className="each_style">
       <div>
@@ -69,37 +73,48 @@ const Style = () => {
         </label>
         {value}
       </div>
-
-      {fetchErr ? (
-        <p>Error fetching data: {fetchErr}</p>
-      ) : (
-        <>
-          {style && Object.keys(style).length > 0 && (
+      <>
+        {style && Object.keys(style).length > 0 ? (
+          <div className="styleObj">
+            <img src={style.image_url} alt="image" />
+            <br />
+            <div className="styleKeys">
+              <span>Category: {style.category} </span>
+              <br />
+              <span> Description: {style.description}</span>
+            </div>
+          </div>
+        ) : (
+          <div>
             <div className="styleObj">
-              <img src={style.image_url} alt="image" />
+              <img src={localStyle.image_url} alt="image" />
               <br />
               <div className="styleKeys">
-                <span>Category: {style.category} </span>
+                <span>Category: {localStyle.category} </span>
                 <br />
-                <span> Description: {style.description}</span>
+                <span> Description: {localStyle.description}</span>
               </div>
             </div>
-          )}
-          <div className="feature_buttons">
-            <Link to={"/styles"}>
-              <button className="style_buttons">Back</button>
-            </Link>
-
-            <button className="style_buttons" onClick={handleDelete}>Delete</button>
-            <button className="style_buttons" onClick={handleEdit}>Edit</button>
-
-            <Link to={`/styles/${id}/clients`} state={{ style }}>
-              {" "}
-              <button className="style_buttons">Client List</button>{" "}
-            </Link>
           </div>
-        </>
-      )}
+        )}
+        <div className="feature_buttons">
+          <Link to={"/styles"}>
+            <button className="style_buttons">Back</button>
+          </Link>
+
+          <button className="style_buttons" onClick={handleDelete}>
+            Delete
+          </button>
+          <button className="style_buttons" onClick={handleEdit}>
+            Edit
+          </button>
+
+          <Link to={`/styles/${id}/clients`} state={{ style }}>
+            {" "}
+            <button className="style_buttons">Client List</button>{" "}
+          </Link>
+        </div>
+      </>
     </div>
   );
 };
