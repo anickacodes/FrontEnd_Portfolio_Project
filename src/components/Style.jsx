@@ -62,7 +62,7 @@ const Style = () => {
     <div className="each_style">
       <div>
         <label>
-          Style: {style.service}
+          Category: {style.category}
           <select value={value} onChange={handleChange}>
             <option value="default"></option>
             <option value={style.service}></option>
@@ -79,9 +79,13 @@ const Style = () => {
             <img src={style.image_url} alt="image" />
             <br />
             <div className="styleKeys">
-              <span>Category: {style.category} </span>
+              <span>Service:</span> {style.service} 
               <br />
-              <span> Description: {style.description}</span>
+              <span> Description:</span> {style.description}
+              <span> Allotted time:</span> {style.duration}
+              <span> Price: $ {style.price}</span>
+
+
             </div>
           </div>
         ) : (
@@ -90,9 +94,11 @@ const Style = () => {
               <img src={localStyle.image_url} alt="image" />
               <br />
               <div className="styleKeys">
-                <span>Category: {localStyle.category} </span>
+                <span>Service: {localStyle.service} </span>
                 <br />
                 <span> Description: {localStyle.description}</span>
+                <span> Duration: {localStyle.duration}</span>
+                <span> Price: {localStyle.price}</span>
               </div>
             </div>
           </div>

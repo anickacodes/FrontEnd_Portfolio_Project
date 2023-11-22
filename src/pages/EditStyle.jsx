@@ -3,10 +3,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const EditStyle = () => {
   const {
-    state: { style }
+    state: { style },
   } = useLocation();
   const navigate = useNavigate();
-const API = import.meta.env.VITE_API_PORT
+  const API = import.meta.env.VITE_API_PORT;
 
   const [editStyle, setEditStyle] = useState({
     category: "",
@@ -16,7 +16,6 @@ const API = import.meta.env.VITE_API_PORT
     price: "",
     image_url: "",
   });
-
 
   useEffect(() => {
     if (style) {
@@ -32,24 +31,21 @@ const API = import.meta.env.VITE_API_PORT
     }));
   };
 
-  const handleSubmit =  async (se) => {
+  const handleSubmit = async (se) => {
     se.preventDefault();
-    console.log("Updated Style:", editStyle);
     try {
       const res = await fetch(`${API}/styles/${style.id}`, {
-        method: "PUT", 
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(editStyle),
-      })
-      const updatedStyle = await res.json()
-      console.log('style updated', updatedStyle)
+      });
+      const updatedStyle = await res.json();
       navigate(`/styles/${style.id}`);
     } catch (err) {
-      console.error('Error Updating Style', err)
+      console.error("Error Updating Style", err);
     }
-
   };
 
   return (
@@ -85,7 +81,29 @@ const API = import.meta.env.VITE_API_PORT
           />
         </label>
         <br />
-
+        <label>
+          Alotted Time:
+          <input
+            id="duration"
+            type=""
+            name="duration"
+            value={editStyle.duration}
+            onChange={handleInputChange}
+          />
+        </label>{" "}
+        <br />
+        <label>
+          Price:
+          <input
+            id="price"
+            type="text"
+           max={5}
+            name="price"
+            value={editStyle.price}
+            onChange={handleInputChange}
+          />
+        </label>{" "}
+        <br />
         <button type="submit">Save Changes</button>
       </form>
     </div>

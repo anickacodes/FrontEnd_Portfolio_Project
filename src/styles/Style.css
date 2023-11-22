@@ -8,8 +8,6 @@
     margin: auto;
 }
 
-
-
 img {
     margin: 22px;
     padding: 2px;
@@ -22,25 +20,27 @@ img {
 }
 
 .styleKeys {
-    font-size: larger;
+    width: fit-content;
+    font-size: 22px;
     font-weight: bold;
+    padding: 10px;
+    color: black;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
 }
 
-.feature_buttons {
-    border: 2px solid green;
-    margin: 22px;
-    /* display: grid; */
+span {
+    color: rgb(202, 196, 194);
+    display: flex;
+    align-content: left;
 }
 
+.feature_buttons,
 .style_buttons {
-    /* margin: 22px; */
-
+    margin: 22px;
 }
 
-@media screen and (max-width: 768px) {
-    .each_style {
-        /* display: flex;
-        flex-direction: column; */
-        /* align-items: stretch; */
-    }
-}
+
+
+@media screen and (max-width: 768px) {}
