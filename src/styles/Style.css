@@ -1,35 +1,46 @@
 .each_style {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     border: 1px solid white;
     border-radius: 11px;
+    width: fit-content;
+    /* height: fit-content; */
+    padding: 44px;
+    margin: auto;
 }
 
+
+
 img {
+    margin: 22px;
+    padding: 2px;
     border: 4px white inset;
     width: 150px;
     height: 200px;
     height: auto;
     border-radius: 11px;
-
+    position: relative;
 }
 
 .styleKeys {
-    border: 2PX SOLID teal;
     font-size: larger;
     font-weight: bold;
 }
 
+.feature_buttons {
+    border: 2px solid green;
+    margin: 22px;
+    /* display: grid; */
+}
 
 .style_buttons {
-    display: inherit;
-    justify-content: space-around;
-    margin: 22px;
+    /* margin: 22px; */
+
 }
 
 @media screen and (max-width: 768px) {
     .each_style {
-        flex-direction: column;
-        align-items: stretch;
+        /* display: flex;
+        flex-direction: column; */
+        /* align-items: stretch; */
     }
 }

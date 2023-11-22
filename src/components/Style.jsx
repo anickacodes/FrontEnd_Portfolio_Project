@@ -9,6 +9,7 @@ const Style = () => {
   const { id } = useParams();
   const [style, setStyle] = useState({});
   const [fetchErr, setFetchErr] = useState(null);
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,10 +50,25 @@ const Style = () => {
     navigate(`/styles/${id}/edit`, { state: { style } });
   };
 
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
   return (
     <div className="each_style">
-      <h3>Style: {style.service}</h3>
+      <div>
+        <label>
+          Style: {style.service}
+          <select value={value} onChange={handleChange}>
+            <option value="default"></option>
+            <option value={style.service}></option>
+            <option value="default"></option>
+            <option value="default"></option>
+            <option value="default"></option>
+          </select>
+        </label>
+        {value}
+      </div>
 
       {fetchErr ? (
         <p>Error fetching data: {fetchErr}</p>
@@ -69,17 +85,17 @@ const Style = () => {
               </div>
             </div>
           )}
-          <div className="style_buttons">
+          <div className="feature_buttons">
             <Link to={"/styles"}>
-              <button>Back</button>
+              <button className="style_buttons">Back</button>
             </Link>
 
-            <button onClick={handleDelete}>Delete</button>
-            <button onClick={handleEdit}>Edit</button>
+            <button className="style_buttons" onClick={handleDelete}>Delete</button>
+            <button className="style_buttons" onClick={handleEdit}>Edit</button>
 
-            <Link to={`/styles/${id}/clients`} state={{style}}>
+            <Link to={`/styles/${id}/clients`} state={{ style }}>
               {" "}
-              <button>Client List</button>{" "}
+              <button className="style_buttons">Client List</button>{" "}
             </Link>
           </div>
         </>

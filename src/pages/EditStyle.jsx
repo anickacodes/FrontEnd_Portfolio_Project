@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const EditStyle = () => {
-  console.log("Location object:", useLocation());
   const {
     state: { style },
   } = useLocation();
+  const navigate = useNavigate();
 
-  console.log("Style object in EditStyle:", style);
   const [editStyle, setEditStyle] = useState({
     category: "",
     service: "",
@@ -16,7 +15,6 @@ const EditStyle = () => {
     price: "",
     image_url: "",
   });
-  console.log(style);
 
   useEffect(() => {
     if (style) {
