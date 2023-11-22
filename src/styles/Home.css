@@ -4,13 +4,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(74%) contrast(92%);
-    display: flex;
-    align-items: center;
+    align-items: center;  
     justify-content: center;
-}
-
-.home {
     height: 100vh;
+    flex-direction: column; 
 }
 
 .greeting {

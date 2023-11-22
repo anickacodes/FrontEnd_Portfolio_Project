@@ -15,7 +15,7 @@ const Home = () => {
     dragFriction: 0.422,
     duration: 7133,
     stagger: 8,
-    width: "44%",
+    width: "100%",
     height: "24%",
     colors: ["#4d188e", "#1a7968", "#ffe065", "#a4394f", "#a3f77f"],
   };
@@ -27,21 +27,16 @@ const Home = () => {
   };
 
   return (
-    <div className="wrapper">
-          <Confetti active={setCelebrate} config={confettiConfig} />
-      
-      <div className="home">
-        
+    <div>
+      <div className="wrapper">
         <h2 className="greeting">
           <button onClick={handleClick}>
             Welcome to our Grand Opening Site
           </button>
         </h2>
-        
       </div>
-      
+      <Confetti active={celebrate} config={confettiConfig} />
     </div>
-    
   );
 };
 
